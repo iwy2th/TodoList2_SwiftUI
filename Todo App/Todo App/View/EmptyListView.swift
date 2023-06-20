@@ -32,8 +32,6 @@ struct EmptyListView: View {
         Text("\" \(tips.randomElement() ?? self.tips[0])\"")
           .italic()
           .layoutPriority(0.5)
-        //  .font(.system(.headline, design: .rounded))
-
         Image("\(images.randomElement() ?? self.images[0])")
           .resizable()
           .scaledToFit()

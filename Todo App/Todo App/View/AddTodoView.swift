@@ -14,9 +14,13 @@ struct AddTodoView: View {
   var body: some View {
     NavigationView {
       VStack {
-        Form {
+        VStack(alignment: .leading, spacing: 20) {
           // MARK: - TODO NAME
           TextField("Todo", text: $name)
+            .padding()
+            .background(Color(UIColor.tertiarySystemFill))
+            .cornerRadius(9)
+            .font(.system(size: 24, weight: .bold, design: .default))
           // MARK: - TODO PRIORITY PICKER
           Picker("Priority", selection: $priority) {
             ForEach(priorities, id: \.self) {
@@ -33,7 +37,6 @@ struct AddTodoView: View {
 
               do {
                 try self.managedObjectContext.save()
-                print("oke \(todo.name ?? ""),...\(todo.priority ?? "")")
               } catch {
                 print(error)
               }
@@ -46,8 +49,21 @@ struct AddTodoView: View {
             self.presentationMode.wrappedValue.dismiss()
           } label: {
             Text("Save")
+              .font(.system(size: 24, weight: .bold, design: .default))
+              .padding()
+              .frame(minWidth: 0, maxWidth: .infinity)
+              .background(.blue)
+              .cornerRadius(9)
+              .foregroundColor(.white)
+              .overlay(
+                RoundedRectangle(cornerRadius: 9)
+                  .stroke(.white, lineWidth: 1)
+              )
+              .shadow(color: .gray, radius: 2, x: 0, y: 2)
           }//: SAVE BUTTON
-        } //: FORM
+        } //: VSTACk
+        .padding(.horizontal)
+        .padding(.vertical, 30)
 
         Spacer()
       }//: VSTACK
