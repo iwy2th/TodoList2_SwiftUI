@@ -15,6 +15,7 @@ struct ContentView: View {
   var todos: FetchedResults<Todo>
   @State private var showingAddTodoView: Bool = false
   @State private var animatingButton: Bool = false
+  @State private var showingSettingView: Bool = false
   // MARK: - BODY
   var body: some View {
     NavigationView {
@@ -27,22 +28,21 @@ struct ContentView: View {
               Text(item.priority ?? "Unknown")
             }
           }//: FOREACH
-          .onDelete(perform: deleteTodo)
+          .onDelete(perform:  deleteTodo)
         }//: LIST
         .navigationTitle("Todo")
         .navigationBarTitleDisplayMode(.inline)
         .navigationBarItems(
-          leading: EditButton()
-//          trailing:
-//        Button(action: {
-//          // show add Todo View
-//          self.showingAddTodoView.toggle()
-//        }, label: {
-//          Image(systemName: "plus")
-//        })
-//          .sheet(isPresented: $showingAddTodoView, content: {
-//            AddTodoView().environment(\.managedObjectContext, self.managedObjectContext)
-//          })
+          leading: todos.count == 0 ? nil : EditButton(),
+          trailing:
+        Button(action: {
+          self.showingSettingView.toggle()
+        }, label: {
+          Image(systemName: "gear")
+        })
+          .sheet(isPresented: $showingSettingView, content: {
+            SettingsView()
+          })
       )
         // MARK: - NO TODO ITEMS
         if todos.count == 0 {
@@ -67,7 +67,7 @@ struct ContentView: View {
               .scaleEffect(self.animatingButton ? 1 : 0)
               .frame(width: 88, height: 88, alignment: .center)
           }
-          .animation(.easeInOut(duration: 2).repeatForever(autoreverses: true), value: animatingButton)
+          .animation(.easeInOut(duration: 5).repeatForever(autoreverses: true), value: animatingButton)
           Button(action: {
             // show add Todo View
             self.showingAddTodoView.toggle()

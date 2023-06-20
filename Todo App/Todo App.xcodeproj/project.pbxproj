@@ -14,6 +14,9 @@
 		720537DA2A41781500BDC561 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 720537D92A41781500BDC561 /* Persistence.swift */; };
 		720537DD2A41781500BDC561 /* Todo_App.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 720537DB2A41781500BDC561 /* Todo_App.xcdatamodeld */; };
 		720537EC2A417CCE00BDC561 /* AddTodoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 720537EB2A417CCE00BDC561 /* AddTodoView.swift */; };
+		7232086C2A41E15B00FC7FF3 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7232086B2A41E15B00FC7FF3 /* SettingsView.swift */; };
+		7232086E2A41E4D100FC7FF3 /* FormRowStaticView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7232086D2A41E4D100FC7FF3 /* FormRowStaticView.swift */; };
+		723208702A41E8CC00FC7FF3 /* FormRowLinkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7232086F2A41E8CC00FC7FF3 /* FormRowLinkView.swift */; };
 		72907D652A41A9E60036F281 /* EmptyListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72907D642A41A9E60036F281 /* EmptyListView.swift */; };
 /* End PBXBuildFile section */
 
@@ -26,6 +29,9 @@
 		720537D92A41781500BDC561 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		720537DC2A41781500BDC561 /* Todo_App.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Todo_App.xcdatamodel; sourceTree = "<group>"; };
 		720537EB2A417CCE00BDC561 /* AddTodoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTodoView.swift; sourceTree = "<group>"; };
+		7232086B2A41E15B00FC7FF3 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		7232086D2A41E4D100FC7FF3 /* FormRowStaticView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormRowStaticView.swift; sourceTree = "<group>"; };
+		7232086F2A41E8CC00FC7FF3 /* FormRowLinkView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormRowLinkView.swift; sourceTree = "<group>"; };
 		72907D632A41A8720036F281 /* Todo-App-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Todo-App-Info.plist"; sourceTree = SOURCE_ROOT; };
 		72907D642A41A9E60036F281 /* EmptyListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyListView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -94,6 +100,9 @@
 				720537D22A41781400BDC561 /* ContentView.swift */,
 				720537EB2A417CCE00BDC561 /* AddTodoView.swift */,
 				72907D642A41A9E60036F281 /* EmptyListView.swift */,
+				7232086B2A41E15B00FC7FF3 /* SettingsView.swift */,
+				7232086D2A41E4D100FC7FF3 /* FormRowStaticView.swift */,
+				7232086F2A41E8CC00FC7FF3 /* FormRowLinkView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -176,6 +185,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7232086C2A41E15B00FC7FF3 /* SettingsView.swift in Sources */,
+				7232086E2A41E4D100FC7FF3 /* FormRowStaticView.swift in Sources */,
+				723208702A41E8CC00FC7FF3 /* FormRowLinkView.swift in Sources */,
 				720537DA2A41781500BDC561 /* Persistence.swift in Sources */,
 				720537D32A41781400BDC561 /* ContentView.swift in Sources */,
 				72907D652A41A9E60036F281 /* EmptyListView.swift in Sources */,
