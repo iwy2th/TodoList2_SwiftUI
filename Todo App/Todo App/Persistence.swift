@@ -13,8 +13,8 @@ struct PersistenceController {
     static var preview: PersistenceController = {
         let result = PersistenceController(inMemory: true)
         let viewContext = result.container.viewContext
-            let newItem = Todo(context: viewContext)
-            newItem.name = "huhu"
+        let newItem = Todo(context: viewContext)
+//         //   newItem.name = "huhu"
         do {
             try viewContext.save()
         } catch {
